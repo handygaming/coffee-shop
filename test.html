@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="body">
+        <div class="nav">
+            <img src="coffee icon.png" alt="">
+            <div id="mobile" class="as">
+                <button id="close-nav">
+                    <i class="fa-solid fa-square-xmark"></i>
+                </button>
+                <a href="#home1">home</a>
+                <a href="#menu">menu</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
+            </div>
+            <button id="open">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="home" id="home1">
+            <div class="text">
+                <p class="title">coffee</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laudantium repellendus vel quaerat nesciunt possimus perferendis amet dolorum aspernatur commodi iste, earum sint mollitia cumque reprehenderit eaque ratione! Ipsam, esse.</p>
+            </div>
+            <div>
+                <img src="main image2.png" alt="">
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <p>menu</p>
+            <div class="items">
+                <div class="item">
+                    <img src="shay be labanpng.png" alt="">
+                    <pre>15$</pre>
+                    <button>add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="coffee1.jpg" alt="">
+                    <pre>20$</pre>
+                    <button>add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="Coffee-Croissant.png" alt="">
+                    <pre>50$</pre>
+                    <button>add to cart</button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <img src="shay be labanpng.png" alt="">
+                    <pre>15$</pre>
+                    <button>add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="coffee1.jpg" alt="">
+                    <pre>20$</pre>
+                    <button>add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="Coffee-Croissant.png" alt="">
+                    <pre>50$</pre>
+                    <button>add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="about" id="about">
+            <p>about</p>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eos esse. Doloribus aspernatur officia cupiditate! Eaque minima quae officiis dolorem. Reprehenderit repellendus rem labore natus deleniti minus obcaecati eum optio eveniet sint asperiores, nobis earum possimus porro facilis sit magni ullam iste illo voluptatem. Obcaecati nisi ab dolorem voluptates! Mollitia!</span>
+        </div>
+        <div class="contact" id="contact">
+            <p>to contact us:</p>
+            <div class="hotline">
+                <pre>hot line :</pre>
+                <p>12345</p>
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button id="scroll1" class="hide">
+            <i class="fa-solid fa-caret-up"></i>
+        </button>
+    </div>
+    <script>
+        let open1 = document.querySelector("#open");
+        let close1 = document.querySelector("#close-nav");
+        let mobile = document.querySelector("#mobile");
+        let scroll1 = document.querySelector("#scroll1");
+        open1.onclick = function (){
+            mobile.classList.toggle("as1");
+            mobile.classList.toggle("as");
+        };
+        close1.onclick = function(){
+            mobile.classList.toggle("as1");
+            mobile.classList.toggle("as");
+        }
+        window.onscroll = function(){
+            if(window.scrollY > 100){
+                scroll1.classList.add("show");
+                scroll1.classList.remove("hide");
+            }else{
+                scroll1.classList.add("hide");
+                scroll1.classList.remove("show");
+            }
+        }
+        scroll1.onclick = function(){
+            window.scrollTo({
+                top : 0,
+                behavior : "smooth"
+            })
+        }
+    </script>
+</body>
+</html>
